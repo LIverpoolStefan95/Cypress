@@ -1,0 +1,22 @@
+{
+  "name": "cypress-",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LIverpoolStefan95/Cypress.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LIverpoolStefan95/Cypress/issues"
+  },
+  "homepage": "https://github.com/LIverpoolStefan95/Cypress#readme",
+  "dependencies": {
+    "cypress": "^11.2.0"
+  }
+}
