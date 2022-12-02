@@ -2,14 +2,16 @@
 
 describe("login test", () => {
 
+    const locators = require("../fixtures/locators.json");
+
     it("login with valid credentials", () => {
-        cy.visit("https://gallery-app.vivifyideas.com/")
-        //cy.get('a[href="/login"]');
-        cy.get('a[class="nav-link nav-buttons"]').first().click()
+        cy.visit("/")
+        cy.get('a[href="/login"]');
+        cy.get(locators.login.loginButton).click();
         //cy.get('input[id="email"]');
-        cy.get("#email").type("mika@gmail.com");
-        cy.get("#password").type("Mika1234");
-        cy.get("button").click();
+        cy.get(locators.login.emailInput).type("mika@gmail.com");
+        cy.get(locators.login.passwordInput).type("Mika1234");
+        cy.get(locators.login.submitButton).click();
     });
 
     it("logout", () => {

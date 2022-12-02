@@ -1,5 +1,7 @@
 /// <reference types="Cypress" />
 
+const locators = require("../fixtures/locators.json");
+
 describe("registration test", () => {
 
 it("register with valid data", () => {
@@ -20,13 +22,13 @@ it("register with valid data", () => {
 
     cy.visit("/");
     cy.get("a[href='/register']").click();
-    cy.get("#first-name").type("Stefan");
-    cy.get("#last-name").type("Runjic");
-    cy.get("#email").type("neki_mej@test.com");
-    cy.get("#password").type("Qwerty123!");
-    cy.get("#password-confirmation").type("Qwerty123!");
-    cy.get("input[type='checkbox']").check();
-    cy.get("button").click();
+    cy.get(locators.register.firstnameInput).type("Stefan");
+    cy.get(locators.register.lastnameInput).type("Runjic");
+    cy.get(locators.register.emailInput).type("neki_mej@test.com");
+    cy.get(locators.register.passwordInput).type("Qwerty123!");
+    cy.get(locators.register.passwordConfirmationInput).type("Qwerty123!");
+    cy.get(locators.register.checkboxInput).check();
+    cy.get(locators.register.button).click();
     cy.url().should("not.include", "/register");
 });
 

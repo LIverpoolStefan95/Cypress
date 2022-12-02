@@ -1,0 +1,24 @@
+{
+    "Login":{
+        "loginButton":"a[href='/login']",
+        "emailInput":"#email",
+        "passwordInput":"#password",
+        "submitButton":"button"
+    },
+    
+    "register": {
+        "registerButton":"a[href='/register']",
+        "firstnameInput":"#first-name",
+        "lastnameInput":"#last-name",
+        "passwordConfirmationInput":"#password-confirmation",
+        "checkboxInput":"input[type='checkbox']",
+        "button":"button"
+
+    },
+    
+    "SharedElements": {
+        "submitButton": "button",
+        "emailInput": "#email",
+        "passwordInput": "#password"
+    }
+}
